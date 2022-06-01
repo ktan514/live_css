@@ -1,0 +1,17 @@
+#color-circle.plate {
+  position: relative;
+  width: calc(2 * var(--r));
+  height: calc(2 * var(--r));
+  display: flex;
+  justify-content: center;
+}
+
+#color-circle.plate>.item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  --angle: calc(calc(var(--i) * 360) / var(--n));
+  background-color: hsl(var(--angle), 100%, 50%);
+  transform-origin: 50% var(--r);
+  transform: rotate(calc(var(--angle) * 1deg));
+}

@@ -1,0 +1,317 @@
+/* 
+ * Windows 
+ */
+#win {
+  --delay: 160ms;
+
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  background: orange;
+}
+
+#win .item {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#win .drive {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  animation: win_drive 3s infinite;
+  animation-timing-function: cubic-bezier(0.0, 0.7, 1.0, 0.3);
+  animation-delay: calc(var(--i) * var(--delay));
+}
+
+#win .ball {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  bottom: 0px;
+  background: transparent;
+  border-radius: 50%;
+
+  animation: win_ball 3s infinite;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--i) * var(--delay));
+}
+
+@keyframes win_drive {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  33% {
+    transform: rotate(360deg);
+  }
+
+  66% {
+    transform: rotate(720deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes win_ball {
+  0% {
+    background: transparent;
+  }
+
+  1% {
+    background: #FFFFFF;
+  }
+
+  65% {
+    background: #FFFFFF;
+  }
+
+  66% {
+    background: transparent
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+
+/*
+ * Slack 
+ */
+#slack {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+
+#slack .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  transform: rotate(calc(calc(var(--i) * 90deg) + 15deg));
+}
+
+#slack .drive {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  animation: sl_drive 2s ease-in-out infinite;
+}
+
+#slack .ball {
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  top: 22px;
+  display: block;
+
+  background: hsla(calc(var(--i) * 90), 100%, 50%, 0.5);
+  border-radius: 10px;
+  animation: sl_ball 2s ease-in-out infinite;
+}
+
+@keyframes sl_drive {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(720deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes sl_ball {
+  0% {
+    left: 0px;
+    width: 20px;
+  }
+
+  25% {
+    left: 0px;
+    width: 20px;
+  }
+
+  50% {
+    left: calc(100% - 20px);
+    width: 20px;
+  }
+
+  75% {
+    left: 0px;
+    width: 100%;
+  }
+
+  100% {
+    left: 0px;
+    width: 100%;
+  }
+}
+
+/*
+ * Youtube
+ */
+
+#youtube {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+
+  background-color: black;
+}
+
+#youtube .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  transform: rotate(calc(var(--i) * 360deg / var(--n)));
+}
+
+#youtube .drive {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#youtube .ball {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  display: block;
+  border-radius: 50%;
+
+  animation: yt_ball 1s steps(var(--n)) calc(var(--i) / var(--n) * 1s) infinite;
+}
+
+@keyframes yt_ball {
+  0% {
+    background: hsla(0, 100%, 100%, 1.0)
+  }
+
+  100% {
+    background: hsla(0, 100%, 100%, 0.2)
+  }
+}
+
+/*
+ * Chrome
+ */
+
+#chrome {
+  --bg-color: lightblue;
+  --arc-color: white;
+  --thick: 10px;
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  background-color: var(--bg-color);
+}
+
+#chrome div {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#chrome .back {
+  padding: 1px;
+}
+
+#chrome .arc {
+  position: relative;
+  border: calc(var(--thick) - 2px) solid var(--arc-color);
+}
+
+#chrome .drive {
+  animation: drive 3.2s linear infinite;
+}
+
+#chrome .mask {
+  border: var(--thick) solid;
+  border-color:
+    var(--bg-color, green) hsla(0, 100%, 100%, 0.0) hsla(0, 100%, 100%, 0.0);
+  animation: mask 2s ease infinite;
+}
+
+#d1 {
+  --a1: 270deg;
+}
+
+#d2 {
+  --a1: 180deg;
+}
+
+#d3 {
+  --a1: 90deg;
+}
+
+#d4 {
+  --a1: 10deg;
+}
+
+@keyframes mask {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(var(--a1));
+  }
+
+  70% {
+    transform: rotate(var(--a1));
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drive {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

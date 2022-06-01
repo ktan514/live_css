@@ -1,0 +1,57 @@
+.burger-label {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232323;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.burger-input {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  display: none;
+}
+
+.burger-line {
+  position: absolute;
+  display: black;
+  width: 100px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.burger-line::before,
+.burger-line::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 40px;
+  transform-origin: left;
+  transition: width 0.4s, transform 0.4s;
+}
+
+.burger-line::before {
+  transform: translateY(-40px);
+}
+
+.burger-line::after {
+  transform: translateY(20px);
+}
+
+.burger-input:checked+.burger-label .burger-line::before {
+  width: 80%;
+  transform: translateY(7px) rotate(-45deg);
+}
+
+.burger-input:checked+.burger-label .burger-line::after {
+  width: 80%;
+  transform: translateY(-27px) rotate(45deg);
+}
