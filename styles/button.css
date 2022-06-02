@@ -1,0 +1,226 @@
+.btn01 {
+  width: 230px;
+  height: 50px;
+  display: block;
+  max-width: 180px;
+  border: 2px solid #333;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  padding: 16px;
+  text-align: center;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn01:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #FFF;
+}
+
+.btn02 {
+  width: 230px;
+  height: 50px;
+  display: block;
+  max-width: 180px;
+  background-color: #333;
+  font-size: 16px;
+  color: #FFF;
+  font-weight: bold;
+  padding: 16px;
+  text-align: center;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn02:hover {
+  background-color: #D3BA2B;
+}
+
+.btn03 {
+  width: 230px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  max-width: 180px;
+  border: 2px solid #333;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.btn03:hover {
+  border-style: dashed;
+}
+
+.btn04 {
+  width: 230px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(90deg, rgb(22, 135, 237), rgb(153, 202, 250));
+  background-size: 200%;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn04:hover {
+  background-position: right center;
+}
+
+.btn05 {
+  width: 230px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #333;
+  border: 2px solid #333;
+  position: relative;
+  padding: 0 0 0 10px;
+}
+
+.btn05:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 90px;
+  margin: auto;
+}
+
+.btn05:hover {
+  color: #333;
+  background: #fff;
+}
+
+.btn05:hover:before {
+  border-color: transparent transparent transparent #333;
+}
+
+.btn06 {
+  width: 230px;
+  height: 50px;
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 280px;
+  padding: 0 0 0 10px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.btn06:hover {
+  background: #313131;
+  color: #FFF;
+}
+
+.btn06:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #313131;
+  border-right: 3px solid #313131;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn06:hover:after {
+  border-color: #FFF;
+}
+
+.btn07 {
+  width: 230px;
+  height: 50px;
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 280px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.btn07:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.btn07:hover {
+  background: #6bb6ff;
+  color: #FFF;
+}
+
+.btn07:hover:after {
+  right: 1.4rem;
+}
+
+.btn08 {
+  width: 230px;
+  height: 50px;
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.btn08:before {
+  content: "\f201";
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #999;
+}
+
+.btn08:hover {
+  background: #313131;
+  color: #FFF;
+}
