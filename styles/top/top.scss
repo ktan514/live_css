@@ -17,6 +17,25 @@ $black: #282936;
   }
 }
 
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 60px;
+}
+
+#container {
+  display: flex;
+  flex-flow: column;
+  border: 2px #ccc solid;
+  height: 300px;
+  background: #fff;
+  
+  // grid-area: main;
+  // align-self: center;
+  // justify-self: center;
+}
+
 button {
   position: relative;
   display: inline-block;
@@ -107,26 +126,5 @@ button {
     .button-text {
       color: $white;
     }
-  }
-}
-
-@supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 60px;
-  }
-
-  #container {
-    display: flex;
-    flex-flow: column;
-    border: 2px #ccc solid;
-    height: 300px;
-    background: #fff;
-    
-    // grid-area: main;
-    // align-self: center;
-    // justify-self: center;
   }
 }

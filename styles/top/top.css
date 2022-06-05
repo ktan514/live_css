@@ -9,6 +9,28 @@
           box-sizing: border-box;
 }
 
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 60px;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border: 2px #ccc solid;
+  height: 300px;
+  background: #fff;
+}
+
 button {
   position: relative;
   display: inline-block;
@@ -102,28 +124,5 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
   color: #fff;
-}
-
-@supports (display: grid) {
-  body {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 60px;
-  }
-  #container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border: 2px #ccc solid;
-    height: 300px;
-    background: #fff;
-  }
 }
 /*# sourceMappingURL=top.css.map */
